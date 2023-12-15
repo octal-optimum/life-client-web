@@ -52,6 +52,7 @@ const BannerComponent = () => {
           style={{
             textAlign: "start",
             backgroundColor: "white",
+   
             paddingTop: "20px",
             paddingBottom: "30px",
           }}

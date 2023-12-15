@@ -5,15 +5,17 @@ import { Button } from "react-bootstrap";
 
 const Formcomponent = () => {
 
-
-
-    
+  
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [mobileNo, setmobileNo] = useState("");
+  const [qualification, setQualification] = useState("");
+  
+  
   return (
     <div>
-      
-     
           <div className="text-center">
-            <h3>
+            <h3  className="form-heading">
               Join <span style={{ color: "violet" }}>L</span>
               <span style={{ color: "blue" }}>I</span>
               <span style={{ color: "green" }}>F</span>

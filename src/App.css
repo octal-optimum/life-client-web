@@ -1,0 +1,9 @@
+
+.App{
+
+}
+
+.container{
+    direction: flex;
+    justify-content: center;
+}

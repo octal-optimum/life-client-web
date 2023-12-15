@@ -5,8 +5,8 @@ import { Link as ScrollLink } from "react-scroll";
 
 const MyNavbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-white custom-navbar">
-      <Container className="pt-3">
+    <nav className="navbar navbar-expand-lg bg-body-white custom-navbar ">
+      <Container className="pt-2">
         {/* Replace the brand with an image */}
         <ScrollLink className="navbar-brand" href="#home">
           <img
@@ -75,23 +75,12 @@ const MyNavbar = () => {
                 Why to use Life?
               </ScrollLink>
             </li>
-            <li className="nav-item">
-              <ScrollLink
-              activeClass="active"
-              to="footer" // Provide the ID of the target section
-              spy={true}
-              smooth={true}
-              offset={30} // Adjust the offset as needed
-              duration={300}
-                className="nav-link font-weight-bold text-dark"
-                href="#footer"
-              >
-                Why to use Life?
-              </ScrollLink>
-            </li>
+           
+            
           </ul>
         </div>
       </Container>
+
     </nav>
   );
 };
