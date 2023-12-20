@@ -12,21 +12,21 @@ position:absolute;
 .navbar{
   height: 60px;
   padding-top: 10px;
-  margin-top: 10px;
   padding-bottom: 15px;
 border-bottom: 1px solid grey;
 }
 
 .card{
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
 }
 .form-width{
-  width: 70%;
+  width: 50%;
 }
 
 .dateCard {
  padding: 20px;
  width: 50%;
+cursor: pointer;
   margin: 20px; 
   box-sizing: border-box; 
   text-align: center; 
@@ -40,6 +40,20 @@ border-bottom: 1px solid grey;
   width: 20px;
 }
 
+.explanation{
+  cursor: pointer;
+  
+}
+
+
+.explanation~p{
+  font-style: italic;
+}
+.explanation~p::before,
+.explanation~p::after {
+  content: '"';
+  font-style: italic;
+}
 
 @media (max-width: 576px) {
   .form-width {
@@ -56,7 +70,9 @@ border-bottom: 1px solid grey;
    
 }
 
-
+.loginpage{
+  background-color: rgb(251, 251, 251);
+}
 
 .responsive-heading {
   color: Carbon;
@@ -105,13 +121,17 @@ font-weight: 400;
 line-height: 20px; 
 }
 
-.ben-container{
-
-    width: 60%;
-    height: 80%;
-    margin:0% 20% 5% 20%;
-  
+.ben-container {
+  text-align: center;
+  width: 60%;
+  height: 80%;
+  margin: 0% 20% 5% 21%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 .footer-cont{
   height: auto;
   margin-top: 2%;
@@ -165,35 +185,49 @@ line-height: 44px;
 text-align: center;
 
 }
+.d-md-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-.help-right{
-  height: auto;
-  border-radius:10px;
-  width: 50%;
+.help-right {
+  flex: 1;
+  height: 900px;
+  border-radius: 10px;
   background-color: blue;
   padding: 1%;
-  border-radius:10px;
+  min-width: 50%;
+  border-radius: 10px;
 }
 
-.help-left{
+.help-left {
+  flex: 1;
+
   height: auto;
-
-  width:50%;
-
+  width: 100%;
 }
-.inner-help-right{
-height: 100%;
-text-align: center;
-border-radius:10px;
-padding: 30px;
-background-color: white;
+
+.inner-help-right {
+  height: 100%;
+  text-align: center;
+  border-radius: 10px;
+  padding: 30px;
+  background-color: white;
 }
+
+
+@media (min-height: 900px) {
+  .help-left {
+    width: 100%; /* Change width to 100% when help-left height exceeds 900px */
+  }
+}
+
+
 
 .whatlifebox {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns */
-  grid-template-rows: 20% 80%; /* Two rows, with the first row taking 50% of the height and the second row taking 100% */
-  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20% 80%; 
   margin: 20% 10% 5% 10%;
   width: 80%;
   background-color: white;
@@ -202,24 +236,47 @@ background-color: white;
 }
 
 .content {
-  grid-column: 1 / 2; /* Span the first column */
-  grid-row: 1 / 2; /* Span the first row */
+  grid-column: 1 / 2; 
+  grid-row: 1 / 2; 
 
 }
 
 .list {
-  grid-column: 1 / 2; /* Span the first column */
-  grid-row: 2 / 3; /* Span the second row */
+  grid-column: 1 / 2; 
+  grid-row: 2 / 3; 
  
 }
 
 .image {
-  grid-column: 2 / 3; /* Span the second column */
-  grid-row: 1 / 3; /* Span both rows */
+  grid-column: 2 / 3; 
+  grid-row: 1 / 3; 
  
   text-align: center;
 }
 
+
+/*ipad  */
+@media (max-width: 850px) {
+  .innate{
+   height: 15px;
+  }
+  .whatlifebox {
+  
+    width: 80%;
+    margin: 80% 10% 5% 10%;
+    display: block;
+    background-color: white;
+    text-align: left;
+    padding: 5%;
+  
+  }
+  .form-component {
+    width: 60%;
+    margin-top: -15%;
+    position: absolute;
+    margin-left: 10%;
+  }
+}
 
 @media (max-width: 767px) {
   .innate{
@@ -259,7 +316,7 @@ background-color: white;
     width: 100%;
     height:auto;
   
-    margin-bottom: 20px; /* Add margin for better separation */
+    margin-bottom: 20px;
   }
   
 
@@ -310,6 +367,7 @@ padding: 10% 10% 2% 10%;
   }
   .ben-container{
     width: 80%;
+             text-align: center;
     height: 80%;
     margin-left: 10%;
 }

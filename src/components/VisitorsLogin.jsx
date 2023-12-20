@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Button, Col } from "react-bootstrap";
+import { Form, Button, Col,Row } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import MyNavbar from "./Navbar";
 import banner from "../assets/banner.png";
@@ -135,7 +135,7 @@ const VisitorsLogin = () => {
       dispatch(visitorsLogin(item))
         .unwrap()
         .then((data) => {
-          console.log(data);
+      navigate("/current-affairs")
         })
         .catch(({ message }) => {
           // setModalMessage(message);
@@ -144,12 +144,12 @@ const VisitorsLogin = () => {
     }
   }
 
-  console.log(errors);
 
   return (
     <div>
       <MyNavbar />
       <div
+      className="loginpage"
         style={{
           backgroundImage: `url(${""})`,
           backgroundSize: "cover",
@@ -157,9 +157,22 @@ const VisitorsLogin = () => {
         }}
       >
         <div className="container d-flex justify-content-center align-items-center vh-100">
-          <Col lg={6} className="card pb-4">
-            <Col>
-              <Form className="p-5 form-width mx-auto">
+        <Col lg={10} className="card p-5">
+        <Row>
+          <Col   md={6}>
+          
+              <img
+                src={
+                  "https://assets.justinmind.com/wp-content/uploads/2018/10/inspiration-login-forms-list-768x492.png"
+                }
+                alt="banner"
+                style={{ width: "100%",height:"100%" ,borderRadius:"20px"}}
+              />
+           
+          </Col>
+          <Col md={6}>
+
+              <Form  className="p-3  mx-auto">
                 <Form.Group className="mb-3">
                   <Form.Label>Name</Form.Label>
                   <Form.Control
@@ -210,12 +223,14 @@ const VisitorsLogin = () => {
                     placeholder="Enter your qualification"
                   />
                 </Form.Group>
-              </Form>
-
-              <div className="text-center">
+                <div className="text-center">
                 <Button onClick={addData}>Continue</Button>
               </div>
+              </Form>
+
+             
             </Col>
+            </Row>
           </Col>
         </div>
       </div>

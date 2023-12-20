@@ -37,6 +37,44 @@ export const GetCurrentAffairs = createAsyncThunk(
     }
   );
 
+// get user faqs
+  export const GeuserFaqs = createAsyncThunk(
+    "user/getuserfaqs",
+    async ( thunkAPI) => {
+      try {
+        const data = await visitorSevice.getFaqs();
+        return { user: data };
+      } catch (error) {
+        const message =
+          (error.response &&
+            error.response.data &&
+            error.response.data.message) ||
+          error.message ||
+          error.toString();
+        return thunkAPI.rejectWithValue({ message });
+      }
+    }
+  );
+
+// save current afairs response
+  export const SaveCurrentAffairsResponse = createAsyncThunk(
+    "Visitors/savecurrentaffairsrespnse",
+    async (item, thunkAPI) => {
+      try {
+        const data = await visitorSevice.saveCurrentaffairsResponse(item);
+        return { user: data };
+      } catch (error) {
+        const message =
+          (error.response &&
+            error.response.data &&
+            error.response.data.message) ||
+          error.message ||
+          error.toString();
+        return thunkAPI.rejectWithValue({ message });
+      }
+    }
+  );
+
 
 const initialState = {
     loading: false,

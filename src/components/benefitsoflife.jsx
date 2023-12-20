@@ -7,7 +7,7 @@ import improveresults from "../assets/imprres.png";
 const Benefitsoflife = () => {
   return (
     <div id="whyuselife">
-      <div className="ben-container">
+      <div  className="ben-container">
         <div className="text-center p-4">
           <h3>
             Benefits of using <span style={{ color: "violet" }}>L</span>
@@ -18,16 +18,18 @@ const Benefitsoflife = () => {
         </div>
 
         <div
-          className="container"
+        
+         
           style={{
             width: "90%",
             height: "80%",
             marginLeft: "5%",
+           
           }}
         >
-          <div className="row gap-5 ">
+          <div  className="row gap-3 ">
             <div
-              className="col-lg-5 mt-3 text-center"
+              className="col-lg-5 mt-1 text-center"
               style={{
                 height: "auto",
                 border: "1px solid #000F6E",
@@ -46,7 +48,7 @@ const Benefitsoflife = () => {
               </p>
             </div>
             <div
-              className="col-lg-5 mt-3 text-center"
+              className="col-lg-5 mt-1 text-center"
               style={{
                 height: "auto",
                 border: "1px solid #000F6E",
@@ -54,7 +56,7 @@ const Benefitsoflife = () => {
               }}
             >
               <img
-                className="mt-4"
+                className="mt-"
                 src={learningskills}
                 style={{ width: "100px" }}
               />
@@ -66,9 +68,9 @@ const Benefitsoflife = () => {
             </div>
           </div>
 
-          <div className="row gap-5">
+          <div className="row gap-3 mt-3">
             <div
-              className="col-lg-5 mt-3 text-center"
+              className="col-lg-5 mt-1 text-center"
               style={{
                 height: "auto",
                 border: "1px solid #000F6E",
@@ -87,7 +89,7 @@ const Benefitsoflife = () => {
               </p>
             </div>
             <div
-              className="col-lg-5 mt-3 text-center"
+              className="col-lg-5 mt-1 text-center"
               style={{
                 height: "auto",
                 border: "1px solid #000F6E",

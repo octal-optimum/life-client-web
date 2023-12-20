@@ -16,12 +16,30 @@ class visitorSevice {
   static getCurrentAffairs(id) {
     return axios.get(API_PATHS.getcurrentAffairs + "?visitorId="+ id).then((response) => {
       if (response.data) {
-        
-      
       }
       return response.data;
     });
   }
+
+  // get faqs
+  static getFaqs() {
+    return axios.get(API_PATHS.userFaqs).then((response) => {
+      if (response.data) {
+      }
+      return response.data;
+    });
+  }
+
+
+  //save user currentaffairs responses
+static saveCurrentaffairsResponse(item) {
+  return axios.post(API_PATHS.savecurrentaffairsresponse,item).then((response) => {
+    if (response.data) {
+    }
+    return response.data;
+  });
 }
+}
+
 
   export default visitorSevice;

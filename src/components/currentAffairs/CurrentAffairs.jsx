@@ -51,10 +51,12 @@ const CurrentAffairs = () => {
       <MyNavbar />
 
       <div className="container d-flex justify-content-center mt-5 ">
-        <Col lg={8} className="card pb-4 p-4">
+      
+        <Col lg={6} sm={10} className="card pb-4 p-4">
+        <h4>Monthly Current affairs</h4>
           <Accordion defaultActiveKey="0">
             {data?.map((month, index) => (
-              <div className="mt-3">
+              <div className="mt-3 ">
                 <Accordion.Item eventKey={index}>
                   <Accordion.Header>{month.monthName}</Accordion.Header>
                   <Accordion.Body>
@@ -63,7 +65,11 @@ const CurrentAffairs = () => {
                         onClick={() => handleSelectPlan(date)}
                         className="dateCard"
                       >
-                        {date?.date?.split("T")[0]}
+                      {new Date(date?.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                      })}
                       </div>
                     ))}
                   </Accordion.Body>
